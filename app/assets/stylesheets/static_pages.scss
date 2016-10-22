@@ -41,3 +41,12 @@ h2{
    text-transform: uppercase;
    background-color: red;
  }
+
+ .carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.carousel-caption {
+  padding-bottom: 10px;
+  padding-top: 40px;
+}
