@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+ h1{
+   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+   text-align: center;
+   color: #00FF00;
+   padding-top: 51px;
+ }
+
+ h2{
+   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+   text-align: center;
+   color: #00FF00;
+ }
+
+ .navbar {
+   background-color: #00FF00;
+
+ }
+
+  footer {
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #00FF00;
+  }
+
+  .carousel-inner > .item > img {
+     margin: 0 auto;
+ }
+
+ .carousel-caption {
+   padding-bottom: 10px;
+   padding-top: 40px;
+ }
