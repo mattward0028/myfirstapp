@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container-fluid" id="product_show_content">
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
@@ -12,6 +12,8 @@
 
 <p>
   <strong>Image url:</strong>
+</p>
+<p class ="product_show_image">
   <%= image_tag(@product.image_url, class: "img-responsive") %>
 </p>
 
@@ -22,8 +24,9 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  $<%= @product.price %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+</div>

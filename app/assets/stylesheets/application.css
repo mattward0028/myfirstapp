@@ -13,22 +13,35 @@
  *= require_tree .
  *= require_self
  */
+ * {
+   text-align: center;
+   font-family: 'Economica', sans-serif;
+ }
+
  h1{
-   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+   font-family:'Economica', sans-serif;
    text-align: center;
    color: #00FF00;
-   padding-top: 51px;
  }
 
  h2{
-   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+   font-family: 'Economica', sans-serif;
    text-align: center;
    color: #00FF00;
  }
 
+ #product_info {
+   padding-bottom: 20px;
+ }
+.main_title {
+   padding-top: 51px;
+ }
  .navbar {
    background-color: #00FF00;
-
+   font-size: 20px;
+ }
+ .projectName {
+   font-size: 20px;
  }
 
   footer {
@@ -38,6 +51,7 @@
     text-align: center;
     text-transform: uppercase;
     background-color: #00FF00;
+    font-size: 20px;
   }
 
   .carousel-inner > .item > img {
@@ -45,6 +59,18 @@
  }
 
  .carousel-caption {
-   padding-bottom: 10px;
-   padding-top: 40px;
+   padding-bottom: 40px;
+   padding-top: 10px;
+ }
+
+ #product_show_content {
+   padding-top: 51px;
+ }
+
+ #product_edit_content {
+   padding-top: 51px;
+ }
+
+.product_show_image > img {
+   margin: 0 auto;
  }
