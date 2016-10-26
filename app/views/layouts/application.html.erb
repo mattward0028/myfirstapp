@@ -26,17 +26,22 @@
                   <span class="icon-bar"></span>
               </button>
               <div class="projectName navbar-brand">
-                  <a><%= link_to "Home", "/static_pages/index" %></a>
+                  <a><%= link_to "Home", static_pages_index_path %></a>
               </div>
               <!--End of project-->
           </div>
           <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right" aria-expanded="true">
-                  <li><%= link_to "Featured Products", "/static_pages/landing_page" %></li>
+                  <li id="search"><%= form_tag("/products", method: "get") do %>
+                  <%= label_tag(:q, "Search for:") %>
+                  <%= text_field_tag(:q) %>
+                  <%= submit_tag("Search") %>
+                  <% end %></li>
+                  <li><%= link_to "Featured Products", static_pages_landing_page_path %></li>
                   <li><%= link_to "All Products", products_path %></li>
                   <li><%= link_to "Orders", orders_path %></li>
-                  <li> <%= link_to "About", '/static_pages/about' %> </li>
-                  <li><%= link_to "Contact", '/static_pages/contact' %></li>
+                  <li> <%= link_to "About", static_pages_about_path %> </li>
+                  <li><%= link_to "Contact", static_pages_contact_path %></li>
               </ul>
               <!--End of navbar right-->
           </div>
