@@ -2,7 +2,7 @@
   <h1>Featured Product:</h1>
   <h2><%= @featured_product.name %></h2>
 </div>
-
+<div class="container">
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -32,5 +32,7 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
+
 </div>
 <%= params[:example_key].to_i * 10 %>
