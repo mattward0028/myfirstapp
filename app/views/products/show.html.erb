@@ -1,40 +1,54 @@
-<p id="notice"><%= notice %></p>
+<p id="notice">
+    <%= notice %>
+</p>
 <div class="container" id="product_show_content">
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+    <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+    </p>
+    <p>Average Rating:
+        <div class="rated" data-score="<%= @product.average_rating %>"></div>
+    </p>
+    <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+    </p>
 
-<p>
-  <strong>Image url:</strong>
-</p>
-<p class ="product_show_image">
-  <%= image_tag(@product.image_url, class: "img-responsive") %>
-</p>
+    <p>
+        <strong>Image url:</strong>
+    </p>
+    <p class="product_show_image">
+        <%= image_tag(@product.image_url, class: "img-responsive") %>
+    </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+    <p>
+        <strong>Colour:</strong>
+        <%= @product.colour %>
+    </p>
 
-<p>
-  <strong>Price:</strong>
-  $<%= @product.price %>
-</p>
+    <p>
+        <strong>Price:</strong> $
+        <%= @product.price %>
+    </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Back', products_path %>
 
-<p>
-  <!-- <%= @product.highest_rating_comment %> -->
-  <%= render "products/new_comment" %>
-  <%= render "products/comments" %>
+            <p>
+                <!-- <%= @product.highest_rating_comment %> -->
+                <%= render "products/new_comment" %>
+                    <%= render "products/comments" %>
+                        <% unless @comments.empty? %>
+                            <div class="pagination">
+                                <div class="digg_pagination">
+                                    <div class="page_info">
+                                        <%= page_entries_info @comments %>
+                                    </div>
+                                    <%= will_paginate @comments, :container => false %>
+                                </div>
+                            </div>
+                            <% end %>
 
-</p>
+            </p>
 
 </div>
