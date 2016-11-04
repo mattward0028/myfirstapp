@@ -21,13 +21,13 @@
  h1{
    font-family:'Economica', sans-serif;
    text-align: center;
-   color: #00FF00;
+   color: #C6E2FF;
  }
 
  h2{
    font-family: 'Economica', sans-serif;
    text-align: center;
-   color: #00FF00;
+   color: #C6E2FF;
  }
 
  #product_info {
@@ -37,7 +37,7 @@
    padding-top: 51px;
  }
  .navbar {
-   background-color: #00FF00;
+   background-color: #C6E2FF;
    font-size: 20px;
  }
  .projectName {
@@ -55,7 +55,7 @@
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    background-color: #00FF00;
+    background-color: #C6E2FF;
     font-size: 20px;
   }
 
