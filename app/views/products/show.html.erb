@@ -28,8 +28,13 @@
 
     <p>
         <strong>Price:</strong> $
-        <%= @product.price %>
+        <%= @product.price_in_cents %>
     </p>
+    <p>
+      <%= form_tag "/payments/create" do %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+</p>
     <% if signed_in? && current_user.admin? %>
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <% end %>
