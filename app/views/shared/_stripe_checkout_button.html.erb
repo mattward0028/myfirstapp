@@ -4,5 +4,5 @@
   data-image="<%= @product.image_url %>"
   data-name="Demo Site"
   data-description="<%= @product.name %>"
-  data-amount="<%= number_with_precision((@product.price_in_cents), :precision => 2) %>">
+  data-amount="<%= (@product.price_in_cents) * 100 %>">
 </script>
