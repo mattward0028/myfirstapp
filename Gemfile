@@ -44,6 +44,8 @@ end
 
 group :production do
   gem 'pg'
+  gem 'memcachier'
+  gem 'dalli'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -63,3 +65,4 @@ gem "factory_girl_rails", "~> 4.0"
 gem 'stripe'
 
 gem "brakeman", :require => false
+

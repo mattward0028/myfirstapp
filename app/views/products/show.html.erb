@@ -2,6 +2,7 @@
     <%= notice %>
 </p>
 <div class="container" id="product_show_content">
+    <% cache @product do %>
     <p>
         <strong>Name:</strong>
         <%= @product.name %>
@@ -55,5 +56,5 @@
                             <% end %>
 
             </p>
-
+    <% end %>
 </div>

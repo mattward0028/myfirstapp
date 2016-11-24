@@ -6,7 +6,9 @@
 
 <div class="container-fluid" id="product_page_content">
   <div class="row">
+  	<% cache(cache_key_for_products) do %>
     <%= render @products %>
+    <% end %>
   </div>
 </div>
 
