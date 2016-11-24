@@ -66,3 +66,4 @@ gem 'stripe'
 
 gem "brakeman", :require => false
 
+gem 'redis-rails'
