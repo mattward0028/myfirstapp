@@ -46,15 +46,9 @@
                 
                 <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
                 <%= render "products/new_comment" %>
-                    <%= render "products/comments" %>
-                        <% unless @comments.empty? %>
-                                <div class="pagination">
-                                    <div class="page_info">
-                                        <%= page_entries_info @comments %>
-                                    </div>
-                                    <%= will_paginate @comments, :container => false %>
-                                </div>
-                            <% end %>
+                <%= will_paginate @comments %>
+                <%= render partial: "comments" %>
+                <%= will_paginate @comments %>
 
             </p>
     <% end %>
