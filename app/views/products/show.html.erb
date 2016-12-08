@@ -2,7 +2,7 @@
     <%= notice %>
 </p>
 <div class="container" id="product_show_content">
-    <% cache @product do %>
+    
     <p>
         <strong>Name:</strong>
         <%= @product.name %>
@@ -46,10 +46,9 @@
                 
                 <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
                 <%= render "products/new_comment" %>
-                <%= will_paginate @comments %>
                 <%= render partial: "comments" %>
                 <%= will_paginate @comments %>
 
             </p>
-    <% end %>
+    
 </div>
